@@ -98,6 +98,9 @@ lvim.plugins = {
       require("lsp_lines").setup()
     end,
   },
+
+  'https://github.com/terryma/vim-multiple-cursors', --" CTRL + N for multiple cursors:
+  "phaazon/hop.nvim"
   -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
   -- "rmagatti/session-lens"

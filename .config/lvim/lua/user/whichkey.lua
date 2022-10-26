@@ -1,4 +1,6 @@
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
+lvim.builtin.which_key.mappings["h"] = { "<cmd>split<cr>", "hsplit" }
+lvim.builtin.which_key.mappings[","] = { "<cmd>nohlsearch<cr>", "No Higlights" }
 lvim.builtin.which_key.mappings["gy"] = "Link"
 lvim.builtin.which_key.mappings["r"] = {
 	name = "Replace",
