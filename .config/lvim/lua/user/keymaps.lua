@@ -6,6 +6,14 @@ local opts = { noremap = true, silent = true }
 
 local keymap = vim.keymap.set
 
+-- TODO: Hacer comandos para cambiar rapido entre pestañas de manera normal
+-- keymap("n","<c-1>","<cmd>BufferLinePick<cr>c",opts)
+-- keymap("n","<c-2>","<cmd>BufferLinePick<cr>a",opts)
+-- keymap("n","<c-3>","<cmd>BufferLinePick<cr>b",opts)
+-- keymap("n","<c-4>","<cmd>BufferLinePick<cr>d",opts)
+
+-- keymap("n","<m-c>","<cmd>BufferKill<cr>",opts)
+keymap("n", "<m-,>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
 keymap("n", "<C-i>", "<C-i>", opts)
 
@@ -42,7 +50,8 @@ keymap("n", "Q", "<cmd>Bdelete!<CR>", opts)
 keymap(
   "n",
   "<F6>",
-  [[:echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>]],
+  [[:echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>]]
+  ,
   opts
 )
 keymap("n", "<F7>", "<cmd>TSHighlightCapturesUnderCursor<cr>", opts)
@@ -57,13 +66,15 @@ keymap("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vi
 vim.api.nvim_set_keymap(
   "n",
   "<tab>",
-  "<cmd>lua require('telescope').extensions.harpoon.marks(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Harpoon'})<cr>",
+  "<cmd>lua require('telescope').extensions.harpoon.marks(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Harpoon'})<cr>"
+  ,
   opts
 )
 vim.api.nvim_set_keymap(
   "n",
   "<s-tab>",
-  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>",
+  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>"
+  ,
   opts
 )
 
@@ -79,10 +90,10 @@ vim.cmd [[
 
 keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
 
-keymap("t", "<c-h>","history<cr>", opts)
-keymap("t", "<c-l>","clear<cr>", opts)
-keymap("t", "<c-j>","<cr>", opts)
-keymap("t", "<c-k>","", opts)
+keymap("t", "<c-h>", "history<cr>", opts)
+keymap("t", "<c-l>", "clear<cr>", opts)
+keymap("t", "<c-j>", "<cr>", opts)
+keymap("t", "<c-k>", "", opts)
 
 M.show_documentation = function()
   local filetype = vim.bo.filetype

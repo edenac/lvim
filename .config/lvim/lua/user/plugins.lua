@@ -100,8 +100,19 @@ lvim.plugins = {
   },
 
   'https://github.com/terryma/vim-multiple-cursors', --" CTRL + N for multiple cursors:
-  "phaazon/hop.nvim"
-  -- https://github.com/jose-elias-alvarez/typescript.nvim
+  "phaazon/hop.nvim",
+  -- Packer
+  {
+    "folke/noice.nvim",
+    event = "VimEnter",
+    config = function()
+      require("noice").setup()
+    end,
+    requires = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+    },
+  }, -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
   -- "rmagatti/session-lens"
 }
