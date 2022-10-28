@@ -12,6 +12,12 @@ local keymap = vim.keymap.set
 -- keymap("n","<c-3>","<cmd>BufferLinePick<cr>b",opts)
 -- keymap("n","<c-4>","<cmd>BufferLinePick<cr>d",opts)
 
+-- kmap rapidas para modo nmap hotkmaps
+
+
+-- tab nueva
+keymap("n", "<c-t>", "<cmd>vsplit tabnew<cr>", opts)
+keymap("n", "<c-n>", "<cmd>tabnew<cr>", opts)
 
 -- insert-mode (inoremap) kmaps
 keymap("i", "<c-s>", "<esc><cmd>w<cr>a", opts)
@@ -27,6 +33,9 @@ keymap("i", "<F11>", "<esc><cmd>w<cr>:TermExec cmd='clear; java %'<cr> ", opts) 
 -- copy|expand line up&down
 keymap("n", "<m-J>", "yyp", opts)
 keymap("n", "<m-K>", "yyP", opts)
+
+-- nvim-treetoggle
+keymap("n", "<F2>", "<cmd>NvimTreeToggle<cr>,opt")
 
 -- ending line manipulating
 keymap("n", "¿", "$", opts)

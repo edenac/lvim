@@ -1,26 +1,14 @@
--- local status_ok, which_key = pcall(require, "which-key")
--- if not status_ok then
---   return
--- end
-
--- which_key.setup.icons = {
---   breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
---   separator = "➜", -- symbol used between a key and it's label
---   group = "+", -- symbol prepended to a group
--- }
-
--- lvim.builtin.which_key.setup.icons {
---   breadcrumb = '»', -- symbol used in the command line area that shows your active key combo
---   separator = '➜', -- symbol used between a key and it's label
---   group = '+', -- symbol prepended to a group
--- }
-
-
+M = {}
+lvim.builtin.which_key.setup.icons = {
+  breadcrumb = "» ", -- symbol used in the command line area that shows your active key combo
+  separator = "➜ ", -- symbol used between a key and it's label
+  group = "+ ", -- symbol prepended to a group
+}
 
 lvim.builtin.which_key.mappings["gy"] = "Link"
 
 lvim.builtin.which_key.mappings["c"] = {
-  name = "cmd's",
+  name = "Cmd's",
   a = { "<cmd>wq<cr>", "Save & quit" },
   w = { "<cmd>w<cr>", "Write/Save" },
   q = { "<cmd>q<cr>", "Quit" },
@@ -29,8 +17,10 @@ lvim.builtin.which_key.mappings["c"] = {
   [';'] = { "<cmd>Alpha<cr>", "dashboard" },
   Q = { "<cmd>;q!<cr>", "Quit w/o save !" },
   W = { "<cmd>;wq!<cr>", "Quit & save !" },
+  e = { "<cmd>NvimTreeToggle<cr>", "Explorer !" },
 }
 
+  -- lvim.builtin.which_key.mappings["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" }
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
@@ -68,7 +58,7 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 
 lvim.builtin.which_key.mappings["j"] = {
-  name = "java",
+  name = "Java",
   r = { "<cmd>w<cr><cmd>TermExec cmd='clear; java %'<cr>", "Run-in java" },
   c = { "<cmd>w<cr><cmd>TermExec cmd='clear; javac %'<cr>", "Compile-in java" } -- dejarlo asi por si no llega a compilar aparecerá el msj en consola
 }
@@ -190,6 +180,7 @@ lvim.builtin.which_key.mappings["h"] = nil
 lvim.builtin.which_key.mappings["w"] = nil
 lvim.builtin.which_key.mappings["q"] = nil
 lvim.builtin.which_key.mappings[";"] = nil
+lvim.builtin.which_key.mappings["s"] = nil
 
 local m_opts = {
   mode = "n", -- NORMAL mode
@@ -226,3 +217,5 @@ local m_mappings = {
 }
 
 which_key.register(m_mappings, m_opts)
+
+return M

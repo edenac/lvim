@@ -99,7 +99,7 @@ lvim.plugins = {
     end,
   },
 
-  'https://github.com/terryma/vim-multiple-cursors', --" CTRL + N for multiple cursors:
+  -- 'https://github.com/terryma/vim-multiple-cursors', --" CTRL + N for multiple cursors:
   "phaazon/hop.nvim",
   -- Packer
   {
