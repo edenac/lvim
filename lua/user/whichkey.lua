@@ -15,12 +15,12 @@ lvim.builtin.which_key.mappings["c"] = {
   y = { "<cmd>history<cr>", "History" },
   s = { ":lcd %:p:h<cr>:saveas ", "saveas" }, -- queda pidiendo argumento , escribirlo aunque no sea visible luego de escribir la primer letra aparecerá
   [';'] = { "<cmd>Alpha<cr>", "dashboard" },
-  Q = { "<cmd>;q!<cr>", "Quit w/o save !" },
-  W = { "<cmd>;wq!<cr>", "Quit & save !" },
+  Q = { "<cmd>q!<cr>", "Quit w/o save!" },
+  W = { "<cmd>wq!<cr>", "Quit & save!" },
   e = { "<cmd>NvimTreeToggle<cr>", "Explorer !" },
 }
 
-  -- lvim.builtin.which_key.mappings["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" }
+-- lvim.builtin.which_key.mappings["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" }
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
