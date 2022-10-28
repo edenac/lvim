@@ -12,6 +12,27 @@ local keymap = vim.keymap.set
 -- keymap("n","<c-3>","<cmd>BufferLinePick<cr>b",opts)
 -- keymap("n","<c-4>","<cmd>BufferLinePick<cr>d",opts)
 
+
+-- insert-mode (inoremap) kmaps
+keymap("i", "<c-s>", "<esc><cmd>w<cr>a", opts)
+keymap("i", "<c-del>", "<esc>lcw", opts)
+keymap("i", "<c-s-del>", "<esc>ld$a", opts)
+keymap("i", "<m-bs>", "<esc>d0i", opts)
+keymap("i", "<c-d>", "<esc>dd", opts)
+keymap("i", "<m-'>", "<esc>:normal gcc<cr>A", opts) -- asi puedo hacer el run-java directo desde el inoremap y de cualquier lenguaj
+keymap("i", "<F11>", "<esc><cmd>w<cr>:TermExec cmd='clear; java %'<cr> ", opts) --run-in java
+
+
+-- imap <m-bs> <C-R>=expand('')<CR> <Esc>:normal ldb<CR>i
+-- copy|expand line up&down
+keymap("n", "<m-J>", "yyp", opts)
+keymap("n", "<m-K>", "yyP", opts)
+
+-- ending line manipulating
+keymap("n", "¿", "$", opts)
+keymap("n", "d¿", "ld$", opts)
+keymap("n", "y¿", "y$", opts)
+
 -- keymap("n","<m-c>","<cmd>BufferKill<cr>",opts)
 keymap("n", "<m-,>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)

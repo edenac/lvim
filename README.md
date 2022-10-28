@@ -1,2 +1,2 @@
 # lvim
-my lvim config
+my .config/lvim

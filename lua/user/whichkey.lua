@@ -1,7 +1,36 @@
-lvim.builtin.which_key.mappings["a"] = { "<cmd>wq<cr>", "save & quit" }
-lvim.builtin.which_key.mappings["S"] = { "<cmd>lcd %:p:h<cr><cmd>saveas ", "saveas" }
-lvim.builtin.which_key.mappings["y"] = { "<cmd>history<cr>", "history" }
+-- local status_ok, which_key = pcall(require, "which-key")
+-- if not status_ok then
+--   return
+-- end
+
+-- which_key.setup.icons = {
+--   breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+--   separator = "➜", -- symbol used between a key and it's label
+--   group = "+", -- symbol prepended to a group
+-- }
+
+-- lvim.builtin.which_key.setup.icons {
+--   breadcrumb = '»', -- symbol used in the command line area that shows your active key combo
+--   separator = '➜', -- symbol used between a key and it's label
+--   group = '+', -- symbol prepended to a group
+-- }
+
+
+
 lvim.builtin.which_key.mappings["gy"] = "Link"
+
+lvim.builtin.which_key.mappings["c"] = {
+  name = "cmd's",
+  a = { "<cmd>wq<cr>", "Save & quit" },
+  w = { "<cmd>w<cr>", "Write/Save" },
+  q = { "<cmd>q<cr>", "Quit" },
+  y = { "<cmd>history<cr>", "History" },
+  s = { ":lcd %:p:h<cr>:saveas ", "saveas" }, -- queda pidiendo argumento , escribirlo aunque no sea visible luego de escribir la primer letra aparecerá
+  [';'] = { "<cmd>Alpha<cr>", "dashboard" },
+  Q = { "<cmd>;q!<cr>", "Quit w/o save !" },
+  W = { "<cmd>;wq!<cr>", "Quit & save !" },
+}
+
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
@@ -40,8 +69,8 @@ lvim.builtin.which_key.mappings["f"] = {
 
 lvim.builtin.which_key.mappings["j"] = {
   name = "java",
-  r = { "<cmd>w<cr><cmd>:TermExec cmd='clear; java %'<cr>", "Run-in java" },
-  c = { "<cmd>w<cr><cmd>:TermExec cmd='clear; javac %'<cr>", "Compile-in java" }
+  r = { "<cmd>w<cr><cmd>TermExec cmd='clear; java %'<cr>", "Run-in java" },
+  c = { "<cmd>w<cr><cmd>TermExec cmd='clear; javac %'<cr>", "Compile-in java" } -- dejarlo asi por si no llega a compilar aparecerá el msj en consola
 }
 
 lvim.builtin.which_key.mappings["b"] = {
@@ -156,13 +185,11 @@ lvim.builtin.which_key.mappings["t"] = {
   v = { "<cmd>vsplit<cr>", "vsplit" }
 }
 
--- lvim.builtin.which_key.mappings[";"] = nil
-lvim.builtin.which_key.mappings["c"] = nil
 lvim.builtin.which_key.mappings["/"] = nil
 lvim.builtin.which_key.mappings["h"] = nil
--- lvim.builtin.which_key.mappings["L"] = nil
--- lvim.builtin.which_key.mappings["s"] = nil
--- lvim.builtin.which_key.mappings["w"] = nil
+lvim.builtin.which_key.mappings["w"] = nil
+lvim.builtin.which_key.mappings["q"] = nil
+lvim.builtin.which_key.mappings[";"] = nil
 
 local m_opts = {
   mode = "n", -- NORMAL mode

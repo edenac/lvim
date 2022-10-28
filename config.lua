@@ -7,7 +7,6 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 vim.o.relativenumber = true
 
--- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -59,6 +58,7 @@ require("user.bqf")
 require("user.dial")
 require("user.numb")
 require("user.treesitter")
--- require("user.neogit")
 require("user.colorizer")
 require("user.hop")
+-- require("user.nui")
+-- require("user.neogit")
