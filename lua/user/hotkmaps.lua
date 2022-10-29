@@ -1,7 +1,10 @@
+-- hotkmaps, fast shortcuts w/space only
 M = {}
 
 local opts = { noremap = true, silent = true }
 local hkmap = vim.keymap.set
+
+-- normal mode
 hkmap("n", "<space>w", "<cmd>w<cr>", opts)
 hkmap("n", "<space>q", "<cmd>q<cr>", opts)
 hkmap("n", "<space>a", "<cmd>wq<cr>", opts)
@@ -20,5 +23,6 @@ hkmap("n", "<space>g", "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<c
 hkmap("n", "<space>j", "<cmd>w<cr><cmd>TermExec cmd='clear; java %'<cr>", opts)
 hkmap("n", "<space>t", ":TermExec cmd='clear'<cr>", opts)
 hkmap("n", "<space>b", ":Bookmark<cr>", opts)
+-- normal mode
 
 return M

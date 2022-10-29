@@ -37,7 +37,16 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 require("user.plugins")
 require("user.options")
+
+-- kmaps
 require("user.keymaps")
+require("user.hotkmaps")
+require("user.nkmaps")
+require("user.ikmaps")
+require("user.vkmaps")
+require("user.tkmaps")
+-- kmaps
+
 require("user.autocommands")
 require("user.lsp")
 require("user.neoscroll")
@@ -59,4 +68,3 @@ require("user.numb")
 require("user.treesitter")
 require("user.colorizer")
 require("user.hop")
-require("user.hotkmaps")
