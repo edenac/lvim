@@ -1,5 +1,5 @@
 M = {}
-lvim.leader = "space"
+lvim.leader = ","
 
 local opts = { noremap = true, silent = true }
 -- For the description on keymaps, I have a function getOptions(desc) which returns noremap=true, silent=true and desc=desc. Then call: keymap(mode, keymap, command, getOptions("some randome desc")
@@ -43,9 +43,9 @@ keymap("n", "d¿", "ld$", opts)
 keymap("n", "y¿", "y$", opts)
 
 -- keymap("n","<m-c>","<cmd>BufferKill<cr>",opts)
-keymap("n", "<m-,>", "<cmd>nohlsearch<cr>", opts)
+-- keymap("n", "<m-,>", "<cmd>nohlsearch<cr>", opts)
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
-keymap("n", "<C-i>", "<C-i>", opts)
+keymap("n", "<C-i>", ":<cr>", opts)
 
 -- Normal --
 -- Better window navigation

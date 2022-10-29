@@ -115,4 +115,5 @@ lvim.plugins = {
   }, -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
   -- "rmagatti/session-lens"
+  -- "wesQ3/vim-windowswap"
 }
