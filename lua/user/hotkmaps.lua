@@ -23,6 +23,7 @@ hkmap("n", "<space>g", "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<c
 hkmap("n", "<space>j", "<cmd>w<cr><cmd>TermExec cmd='clear; java %'<cr>", opts)
 hkmap("n", "<space>t", ":TermExec cmd='clear'<cr>", opts)
 hkmap("n", "<space>b", ":Bookmark<cr>", opts)
+
 -- normal mode
 
 return M

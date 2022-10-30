@@ -8,11 +8,12 @@ local nkmap = vim.keymap.set
 
 -- Tabs --
 
--- TODO: Hacer comandos para cambiar rapido entre pestañas de manera normal
--- keymap("n","<c-1>","<cmd>BufferLinePick<cr>c",opts)
--- keymap("n","<c-2>","<cmd>BufferLinePick<cr>a",opts)
--- keymap("n","<c-3>","<cmd>BufferLinePick<cr>b",opts)
--- keymap("n","<c-4>","<cmd>BufferLinePick<cr>d",opts)
+-- cambiar rapido entre pestañas de manera normal
+-- nkmap("n","<c-1>","<cmd><cr>c",opts)
+-- nkmap("n","<c-2>","<cmd><cr>a",opts)
+-- nkmap("n","<c-3>","<cmd><cr>b",opts)
+-- nkmap("n","<c-4>","<cmd><cr>d",opts)
+
 
 nkmap("n", "<c-w>", "<cmd>BufferKill<cr>", opts)
 
@@ -37,6 +38,9 @@ nkmap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 nkmap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 
+nkmap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
+nkmap("n", "<C-s>", "::w<cr>", opts)
+
 -- Control key --
 
 
@@ -54,6 +58,16 @@ nkmap("n", "<m-v>", "<cmd>lua require('lsp_lines').toggle()<cr>", opts)
 nkmap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 
 nkmap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
+
+nkmap("n", "<m-h>", ":CybuPrev<cr>", opts)
+nkmap("n", "<m-l>", ":CybuNext<cr>", opts)
+
+nkmap("n", "<m-r>", ":silent only | Jaq<cr>", opts)
+
+--lab
+nkmap("n", "<m-4>", ":Lab code run<cr>", opts)
+nkmap("n", "<m-5>", ":Lab code stop<cr>", opts)
+nkmap("n", "<m-6>", ":Lab code panel<cr>", opts)
 
 -- Alt key --
 
@@ -82,6 +96,10 @@ nkmap(
   ,
   opts
 )
+
+-- hop
+nkmap("n", "L", ":HopWordCurrentLine<cr>", { silent = true })
+nkmap("n", "H", ":HopChar2<cr>", { silent = true })
 
 -- Silent key --
 

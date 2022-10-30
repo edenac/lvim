@@ -1,9 +1,0 @@
--- vim.g.nvim.windowswap_map_keys = 0 -- "prevent default bindings"
--- lvim.g.lvim.windowswap_map_keys = 0
--- require("user.keymaps")
--- keymap("n", ",ww", "<cmd>WindowSwap#EasyWindowSwap()<cr>")
--- keymap
--- nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
--- nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
--- nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
--- lvim.g.windowswap_map_keys = nil

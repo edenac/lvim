@@ -68,9 +68,6 @@ lvim.builtin.which_key.mappings["b"] = {
   c = { "<cmd>BufferKill<cr>", "Close buffer" },
   j = { "<cmd>BufferLinePick<cr>", "Jump" },
   f = { "<cmd>Telescope buffers<cr>", "Find" },
-  -- b = { "<cmd>BufferLineCyclePrev<cr>", "Previous" },
-  -- n = { "<cmd>BufferLineCycleNext<cr>", "Next" },
-  -- w = { "<cmd>BufferWipeout<cr>", "Wipeout" }, -- TODO: implement this for bufferline
   e = {
     "<cmd>BufferLinePickClose<cr>",
     "Pick which buffer to close",
@@ -181,6 +178,7 @@ lvim.builtin.which_key.mappings["w"] = nil
 lvim.builtin.which_key.mappings["q"] = nil
 lvim.builtin.which_key.mappings[";"] = nil
 lvim.builtin.which_key.mappings["s"] = nil
+lvim.builtin.which_key.mappings["e"] = nil
 
 local m_opts = {
   mode = "n", -- NORMAL mode

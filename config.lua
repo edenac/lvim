@@ -4,8 +4,6 @@ lvim.colorscheme = "tokyonight-night"
 
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-vim.o.relativenumber = true
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
@@ -14,7 +12,6 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -45,6 +42,7 @@ require("user.nkmaps")
 require("user.ikmaps")
 require("user.vkmaps")
 require("user.tkmaps")
+require("user.whichkey")
 -- kmaps
 
 require("user.autocommands")
@@ -60,7 +58,6 @@ require("user.lab")
 require("user.git")
 require("user.zen-mode")
 require("user.inlay-hints")
-require("user.whichkey")
 require("user.telescope")
 require("user.bqf")
 require("user.dial")
@@ -68,3 +65,5 @@ require("user.numb")
 require("user.treesitter")
 require("user.colorizer")
 require("user.hop")
+require("user.fidget")
+-- require("user.nvimtree") tratando de quitarl la e del menu

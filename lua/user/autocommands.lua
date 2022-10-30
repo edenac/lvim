@@ -1,12 +1,3 @@
--- vim.api.nvim_create_autocmd({ "User" }, {
---   pattern = { "AlphaReady" },
---   callback = function()
---     vim.cmd [[
---       set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
---     ]]
---   end,
--- })
-
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {
     "Jaq",
@@ -119,13 +110,6 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
--- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---   pattern = { "*.java" },
---   callback = function()
---     vim.lsp.codelens.refresh()
---   end,
--- })
-
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
   callback = function()
     vim.cmd "hi link illuminatedWord LspReferenceText"
@@ -152,21 +136,3 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
     end
   end,
 })
-
--- vim.api.nvim_create_autocmd({ "ModeChanged" }, {
---   callback = function()
---     local luasnip = require "luasnip"
---     if luasnip.expand_or_jumpable() then
---       -- ask maintainer for option to make this silent
---       -- luasnip.unlink_current()
---       vim.cmd [[silent! lua require("luasnip").unlink_current()]]
---     end
---   end,
--- })
-
--- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---   pattern = { "*.ts" },
---   callback = function()
---     vim.lsp.buf.format { async = true }
---   end,
--- })
