@@ -14,6 +14,7 @@ local nkmap = vim.keymap.set
 -- keymap("n","<c-3>","<cmd>BufferLinePick<cr>b",opts)
 -- keymap("n","<c-4>","<cmd>BufferLinePick<cr>d",opts)
 
+nkmap("n", "<c-w>", "<cmd>BufferKill<cr>", opts)
 
 -- tab nueva
 nkmap("n", "<c-t>", "<cmd>vsplit tabnew<cr>", opts)

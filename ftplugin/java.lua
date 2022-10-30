@@ -115,13 +115,13 @@ local config = {
 				updateBuildConfiguration = "interactive",
 				runtimes = {
 					{
-						name = "JavaSE-11",
-						path = "~/.sdkman/candidates/java/11.0.2-open",
+						name = "JavaSE-19",
+						path = "~/jdk-19"
 					},
-					{
-						name = "JavaSE-18",
-						path = "~/.sdkman/candidates/java/18.0.1.1-open",
-					},
+					-- {
+					-- 	name = "JavaSE-18",
+					-- 	path = "~/.sdkman/candidates/java/18.0.1.1-open",
+					-- },
 				},
 			},
 			maven = {
