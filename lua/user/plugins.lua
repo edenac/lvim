@@ -1,5 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
+  -- Using Packer:
+  'Mofiqul/dracula.nvim',
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",

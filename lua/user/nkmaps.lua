@@ -3,13 +3,13 @@ M = {}
 
 local opts = { noremap = true, silent = true }
 local nkmap = vim.keymap.set
-
 -- Control key --
 
 -- Tabs --
 
--- cambiar rapido entre pestañas de manera normal
--- nkmap("n","<c-1>","<cmd><cr>c",opts)
+-- TODO: cambiar rapido entre pestañas de manera normal con c-1,2,3,4 si no se puede con control no hacerlo
+-- nkmap("n", "q", "<cmd>Telescope buffers<cr>:normal Control t", opts)
+-- nkmap("n", "q", "<cmd>Telescope buffers<cr>:normal j", opts)
 -- nkmap("n","<c-2>","<cmd><cr>a",opts)
 -- nkmap("n","<c-3>","<cmd><cr>b",opts)
 -- nkmap("n","<c-4>","<cmd><cr>d",opts)

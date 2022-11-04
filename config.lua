@@ -66,4 +66,4 @@ require("user.treesitter")
 require("user.colorizer")
 require("user.hop")
 require("user.fidget")
--- require("user.nvimtree") tratando de quitarl la e del menu
+-- require("user.nvimtree") --tratando de quitar la e del menu
