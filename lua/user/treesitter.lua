@@ -1,3 +1,16 @@
+if lvim.colorscheme == "lunar" then
+  lvim.builtin.treesitter.rainbow = {
+    enable = true,
+    extended_mode = false,
+    colors = {
+      "Orchid",
+      "DodgerBlue",
+      "Gold",
+    },
+    disable = { "html" },
+  }
+end
+
 lvim.builtin.treesitter.textobjects = {
   select = {
     enable = true,

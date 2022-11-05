@@ -127,10 +127,10 @@ lvim.builtin.which_key.mappings["l"] = {
   -- c = { "<cmd>lua require('user.lsp').server_capabilities()<cr>", "Get Capabilities" },
   -- d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
   d = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
-  -- w = {
-  -- 	"<cmd>Telescope lsp_workspace_diagnostics<cr>",
-  -- 	"Workspace Diagnostics",
-  -- },
+  w = {
+    "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+    "Workspace Diagnostics",
+  },
   f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
   F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
   i = { "<cmd>LspInfo<cr>", "Info" },
@@ -170,6 +170,17 @@ lvim.builtin.which_key.mappings["t"] = {
   o = { "<cmd>tabonly<cr>", "Only Tab" },
   h = { "<cmd>split<cr>", "hsplit" },
   v = { "<cmd>vsplit<cr>", "vsplit" }
+}
+
+lvim.builtin.which_key.mappings["o"] = {
+  name = "Options",
+  c = { "<cmd>lua lvim.builtin.cmp.active = false<cr>", "Completion off" },
+  C = { "<cmd>lua lvim.builtin.cmp.active = true<cr>", "Completion on" },
+  -- w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
+  -- r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
+  -- l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
+  -- s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
+  -- t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
 }
 
 lvim.builtin.which_key.mappings["/"] = nil

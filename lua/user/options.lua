@@ -1,3 +1,4 @@
+lvim.colorscheme = "lunar"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.builtin.illuminate.active = true
@@ -10,6 +11,25 @@ lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.builtin.cmp.cmdline.enable = false
+lvim.builtin.cmp.window.documentation = false
+lvim.builtin.cmp.window.completion = {
+  border = "rounded",
+  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+}
+lvim.builtin.cmp.formatting.source_names = {
+  nvim_lsp = "",
+  emoji = "",
+  path = "",
+  calc = "",
+  cmp_tabnine = "",
+  vsnip = "",
+  luasnip = "",
+  buffer = "",
+  tmux = "",
+  copilot = "",
+  treesitter = "",
+}
+
 vim.opt.showtabline = 0
 
 
