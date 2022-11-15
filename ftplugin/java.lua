@@ -118,10 +118,10 @@ local config = {
 						name = "JavaSE-19",
 						path = "~/jdk-19"
 					},
-					-- {
-					-- 	name = "JavaSE-18",
-					-- 	path = "~/.sdkman/candidates/java/18.0.1.1-open",
-					-- },
+					{
+						name = "JavaSE-17",
+						path = "~/.sdkman/candidates/java/17.0.5-tem",
+					},
 				},
 			},
 			maven = {

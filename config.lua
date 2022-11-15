@@ -27,6 +27,12 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 
+-- set a formatter, this will override the language server formatting capabilities (if it exists)
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "google_java_format", filetypes = { "java" } },
+}
+
 require("user.plugins")
 require("user.options")
 

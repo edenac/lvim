@@ -1,6 +1,16 @@
 -- Additional Plugins
 lvim.plugins = {
   -- Using Packer:
+ {
+    "cbochs/portal.nvim",
+    config = function()
+        require("portal").setup()
+    end,
+    requires = {
+        "cbochs/grapple.nvim",  -- Optional: provides the "grapple" query item
+        "ThePrimeagen/harpoon", -- Optional: provides the "harpoon" query item
+    },
+  },
   "ellisonleao/gruvbox.nvim",
   "sharkdp/fd",
   'Mofiqul/dracula.nvim',

@@ -69,6 +69,9 @@ nkmap("n", "<m-4>", ":Lab code run<cr>", opts)
 nkmap("n", "<m-5>", ":Lab code stop<cr>", opts)
 nkmap("n", "<m-6>", ":Lab code panel<cr>", opts)
 
+-- portal (jumping between buffers history)
+nkmap("n", "<m-o>", require("portal").jump_backward, {})
+nkmap("n", "<m-i>", require("portal").jump_forward, {})
 -- Alt key --
 
 

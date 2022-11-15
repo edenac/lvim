@@ -75,3 +75,6 @@ lua/lv-user-config/
 
 .luarc.json
 .luacheckcache
+
+java-debug/
+vscode-java-test/
