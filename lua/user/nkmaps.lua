@@ -84,6 +84,7 @@ nkmap("n", "<F2>", "<cmd>NvimTreeToggle<cr>,opt")
 nkmap("n", "¿", "$", opts)
 nkmap("n", "d¿", "ld$", opts)
 nkmap("n", "y¿", "y$", opts)
+nkmap("n", "c¿", "c$", opts)
 
 nkmap("n", "Q", "<cmd>Bdelete!<CR>", opts)
 
@@ -99,6 +100,8 @@ nkmap(
   ,
   opts
 )
+
+nkmap("n", "<F11>", "<esc><cmd>w<cr>:TermExec cmd='clear; java %'<cr> ", opts) --run-in java
 
 -- hop
 nkmap("n", "L", ":HopWordCurrentLine<cr>", { silent = true })

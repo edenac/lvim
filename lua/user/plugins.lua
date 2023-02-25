@@ -8,7 +8,7 @@ lvim.plugins = {
     end,
     requires = {
         "cbochs/grapple.nvim",  -- Optional: provides the "grapple" query item
-        "ThePrimeagen/harpoon", -- Optional: provides the "harpoon" query item
+        -- "ThePrimeagen/harpoon", -- Optional: provides the "harpoon" query item
     },
   },
   "ellisonleao/gruvbox.nvim",
@@ -98,7 +98,7 @@ lvim.plugins = {
   },
   {
     "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
+    -- requires = "kyazdani42/nvim-web-devicons",
     config = function()
       require("trouble").setup {
         -- your configuration comes here
