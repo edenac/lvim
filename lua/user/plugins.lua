@@ -78,35 +78,35 @@ lvim.plugins = {
     run = "cd js && npm ci",
   },
   { "tzachar/cmp-tabnine", run = "./install.sh" },
-  {
-    "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-        }
-      end, 100)
-    end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
-  {
-    "folke/trouble.nvim",
-    -- requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = { "VimEnter" },
+  --   config = function()
+  --     vim.defer_fn(function()
+  --       require("copilot").setup {
+  --         plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+  --       }
+  --     end, 100)
+  --   end,
+  -- },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   after = { "copilot.lua" },
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end,
+  -- },
+  -- {
+  --   "folke/trouble.nvim",
+  --   requires = "kyazdani42/nvim-web-devicons",
+  --   config = function()
+  --     require("trouble").setup {
+  --       -- your configuration comes here
+  --       -- or leave it empty to use the default settings
+  --       -- refer to the configuration section below
+  --     }
+  --   end
+  -- },
   {
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     config = function()
