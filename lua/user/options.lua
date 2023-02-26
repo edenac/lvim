@@ -1,3 +1,4 @@
+lvim.format_on_save = true
 lvim.colorscheme = "lunar"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
@@ -26,7 +27,7 @@ lvim.builtin.cmp.formatting.source_names = {
   luasnip = "",
   buffer = "",
   tmux = "",
-  copilot = "",
+  -- copilot = "",
   treesitter = "",
 }
 
@@ -76,11 +77,7 @@ local options = {
   -- colorcolumn = "120",
 
 }
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
--- vim.opt.fillchars.eob = " "
--- vim.opt.fillchars = vim.opt.fillchars + "vertleft: "
--- vim.opt.fillchars = vim.opt.fillchars + "vertright: "
+
 vim.opt.fillchars = vim.opt.fillchars + 'eob: '
 vim.opt.fillchars:append {
   stl = ' ',
