@@ -4,13 +4,13 @@ lvim.plugins = {
   "sharkdp/fd",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
-  "p00f/nvim-ts-rainbow",
-  "mfussenegger/nvim-jdtls",
+  -- "p00f/nvim-ts-rainbow",
   "karb94/neoscroll.nvim",
+  "opalmay/vim-smoothie",
   "j-hui/fidget.nvim",
   "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
-  "christianchiarulli/harpoon",
+  -- "christianchiarulli/harpoon",
   "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
   "ghillb/cybu.nvim",
@@ -36,30 +36,19 @@ lvim.plugins = {
   "phaazon/hop.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "TimUntersberger/neogit",
-  "f-person/git-blame.nvim",
   "ruifm/gitlinker.nvim",
   "monaqa/dial.nvim",
+  "petertriho/nvim-scrollbar",
+  "MunifTanjim/nui.nvim",
+  "jackMort/ChatGPT.nvim",
+  "renerocksai/telekasten.nvim",
+  "cbochs/grapple.nvim",
+  "ThePrimeagen/harpoon",
+  { "christianchiarulli/telescope-tabs", branch = "chris" },
+  "monaqa/dial.nvim",
   {
-    "cbochs/portal.nvim",
-    config = function()
-      require("portal").setup()
-    end,
-    requires = {
-      "cbochs/grapple.nvim", -- Optional: provides the "grapple" query item
-    },
-  },
-  {
-    "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("crates").setup {
-        null_ls = {
-          enabled = true,
-          name = "crates.nvim",
-        },
-      }
-    end,
+    "0x100101/lab.nvim",
+    build = "cd js && npm ci",
   },
   {
     "jinh0/eyeliner.nvim",
@@ -69,15 +58,44 @@ lvim.plugins = {
       }
     end,
   },
-  { "christianchiarulli/telescope-tabs", branch = "chris" },
   {
-    "0x100101/lab.nvim",
-    run = "cd js && npm ci",
+    "saecki/crates.nvim",
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("crates").setup {
+        null_ls = {
+          enabled = true,
+          name = "crates.nvim",
+        },
+      }
+    end,
   },
-  {
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+{
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     config = function()
       require("lsp_lines").setup()
     end,
   },
+  -- better notify, search and commandline si if the plugin is duplicated configure from ~/.local/share/lunarvim/site/pack/lazy
+  -- mejora de notificaciones, busqueda y linea de comandos
+  -- si da problemas de duplicado no modificar el codigo fuente ni el vim del superusuario
+  -- suele estar duplicado en ~/.local/share/lunarvim/site/pack/lazy y packer entonces tratar de solucionar
+  -- el problema desde ahi primero aveces los paquetes duplicados tambien suelen encontrarse en el runtime del nvim del superusuario
+  -- en ese caso borrar el runtime y asi desaparecerá el error solo que aparecerá la carpeta de nuevo cuando se abrá el nvim en lugar del lvim
+  -- los problemas suelen estar en el hover y el signature del lazy
+{
+  "folke/noice.nvim",
+  config = function()
+    require("noice").setup{}
+  end,
+  dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --   If not available, we use `mini` as the fallback
+    "rcarriga/nvim-notify",
+    }
+},
 }

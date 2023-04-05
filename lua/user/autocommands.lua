@@ -1,3 +1,9 @@
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+  callback = function()
+    vim.cmd "set formatoptions-=cro"
+  end,
+})
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {
     "Jaq",
@@ -13,9 +19,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   },
   callback = function()
     vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR> 
-      nnoremap <silent> <buffer> <esc> :close<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      nnoremap <silent> <buffer> <esc> :close<CR>
+      set nobuflisted
     ]]
   end,
 })
@@ -25,8 +31,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   callback = function()
     vim.cmd [[
       nnoremap <silent> <buffer> <m-r> :close<CR>
-      " nnoremap <silent> <buffer> <m-r> <NOP> 
-      set nobuflisted 
+      " nnoremap <silent> <buffer> <m-r> <NOP>
+      set nobuflisted
     ]]
   end,
 })
@@ -37,10 +43,10 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     local buf_ft = vim.bo.filetype
     if buf_ft == "" or buf_ft == nil then
       vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR> 
-      " nnoremap <silent> <buffer> <c-j> j<CR> 
-      " nnoremap <silent> <buffer> <c-k> k<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      " nnoremap <silent> <buffer> <c-j> j<CR>
+      " nnoremap <silent> <buffer> <c-k> k<CR>
+      set nobuflisted
     ]]
     end
   end,
@@ -109,6 +115,7 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     vim.highlight.on_yank { higroup = "Visual", timeout = 40 }
   end,
 })
+
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
   callback = function()

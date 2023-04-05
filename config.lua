@@ -1,44 +1,50 @@
+-- last option (needed)
 lvim.builtin.treesitter.ignore_install = { "haskell" }
+
 -- rules
-require("user.plugins")
-require("user.options")
--- rules
+reload("user.options")
+reload("user.plugins")
+-- -- rules
 
--- kmaps
-require("user.keymaps")
-require("user.hotkmaps")
-require("user.nkmaps")
-require("user.ikmaps")
-require("user.vkmaps")
-require("user.tkmaps")
-require("user.whichkey")
--- kmaps
+-- -- kmaps
+reload("user.keymaps")
+reload("user.hotkmaps")
+reload("user.nkmaps")
+reload("user.ikmaps")
+reload("user.vkmaps")
+reload("user.tkmaps")
+reload("user.whichkey")
+-- -- kmaps
 
+-- -- plugins-mods
+reload("user.autocommands")
+reload("user.lsp")
+reload("user.smoothie")
+reload("user.harpoon")
+reload("user.cybu")
+reload("user.surround")
+reload("user.bookmark")
+reload("user.todo-comments")
+reload("user.jaq")
+reload("user.fidget")
+reload("user.lab")
+reload("user.git")
+reload("user.zen-mode")
+reload("user.inlay-hints")
+reload("user.telescope")
+reload("user.bqf")
+reload("user.dial")
+reload("user.numb")
+reload("user.treesitter")
+reload("user.neogit")
+reload("user.colorizer")
+reload("user.lualine")
+reload("user.scrollbar")
+reload("user.chatgpt")
+reload("user.hop")
+reload("user.icons")
+reload("user.neoscroll")
 -- plugins-mods
-require("user.autocommands")
-require("user.lsp")
-require("user.neoscroll")
-require("user.harpoon")
-require("user.cybu")
-require("user.surround")
-require("user.bookmark")
-require("user.todo-comments")
-require("user.jaq")
-require("user.lab")
-require("user.git")
-require("user.zen-mode")
-require("user.inlay-hints")
-require("user.telescope")
-require("user.bqf")
-require("user.dial")
-require("user.numb")
-require("user.treesitter")
-require("user.colorizer")
-require("user.hop")
-require("user.fidget")
-require("user.lualine")
-require("user.icons")
--- plugins-mods
 
--- reading after plugins loaded
-lvim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
+-- reading after plugins-mods loaded (needed)
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })

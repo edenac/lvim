@@ -41,6 +41,7 @@ nkmap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 nkmap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 nkmap("n", "<C-s>", "::w<cr>", opts)
 
+nkmap("n", "<c-p>", "<cmd>ChatGPT<cr>", opts)
 -- Control key --
 
 
@@ -59,8 +60,11 @@ nkmap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<C
 
 nkmap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
 
-nkmap("n", "<m-h>", ":CybuPrev<cr>", opts)
-nkmap("n", "<m-l>", ":CybuNext<cr>", opts)
+nkmap("n", "<m-h>", "<Plug>(CybuPrev)", opts)
+nkmap("n", "<m-l>", "<Plug>(CybuNext)", opts)
+
+
+
 
 nkmap("n", "<m-r>", ":silent only | Jaq<cr>", opts)
 
