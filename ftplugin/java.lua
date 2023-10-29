@@ -1,3 +1,5 @@
+
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
 vim.opt_local.shiftwidth = 2
 vim.opt_local.tabstop = 2
 vim.opt_local.cmdheight = 2 -- more space in the neovim command line for displaying messages

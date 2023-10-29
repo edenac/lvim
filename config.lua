@@ -44,7 +44,9 @@ reload("user.chatgpt")
 reload("user.hop")
 reload("user.icons")
 reload("user.neoscroll")
+-- reload("user.live-server")
+
 -- plugins-mods
 
 -- reading after plugins-mods loaded (needed)
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" }) -- this is in ftplugin/java
