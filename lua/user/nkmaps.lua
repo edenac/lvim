@@ -28,7 +28,7 @@ nkmap("n", "<c-k>", "<C-w>k", opts)
 nkmap("n", "<c-l>", "<C-w>l", opts)
 
 nkmap("n", "<C-Space>", "<cmd>WhichKey \\<space><cr>", opts)
-nkmap("n", "<C-i>", ":<cr>", opts)
+-- nkmap("n", "<C-i>", ":<cr>", opts)
 
 -- Resize with arrows
 nkmap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -38,8 +38,7 @@ nkmap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 nkmap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 
-nkmap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
-nkmap("n", "<C-s>", "::w<cr>", opts)
+nkmap("n", "<C-s>", ":w<cr>", opts)
 
 nkmap("n", "<c-p>", "<cmd>ChatGPT<cr>", opts)
 -- Control key --
@@ -56,7 +55,7 @@ nkmap("n", "<m-tab>", "<c-6>", opts)
 
 nkmap("n", "<m-v>", "<cmd>lua require('lsp_lines').toggle()<cr>", opts)
 
-nkmap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
+-- nkmap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 
 nkmap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
 
@@ -74,8 +73,12 @@ nkmap("n", "<m-5>", ":Lab code stop<cr>", opts)
 nkmap("n", "<m-6>", ":Lab code panel<cr>", opts)
 
 -- portal (jumping between buffers history)
-nkmap("n", "<m-o>", require("portal").jump_backward, {})
-nkmap("n", "<m-i>", require("portal").jump_forward, {})
+nkmap("n", "<m-i>", "<cmd> Portal jumplist backward<cr>", opts)
+nkmap("n", "<m-o>", "<cmd> Portal jumplist forward<cr>", opts)
+
+-- intentar ir adelante y atras en el salto de manera inmediata para moverme en los documentos de manera mas rapida justo como en nvim original con solo lua desde scratch el vim normal
+-- nkmap("n", "<c-o>", "<cmd> Portal jumplist backward<cr>:normal j <cr>", opts)
+-- nkmap("n", "<c-O>", "<cmd> Portal jumplist forward<cr>j", opts)
 -- Alt key --
 
 

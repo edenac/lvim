@@ -18,7 +18,6 @@ lvim.plugins = {
   "j-hui/fidget.nvim",
   "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
-  -- "christianchiarulli/harpoon",
   "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
   "ghillb/cybu.nvim",
@@ -51,8 +50,12 @@ lvim.plugins = {
   "jackMort/ChatGPT.nvim",
   "renerocksai/telekasten.nvim",
   "cbochs/grapple.nvim",
+  "cbochs/portal.nvim",
   "ThePrimeagen/harpoon",
-  { "christianchiarulli/telescope-tabs", branch = "chris" },
+  {
+    "christianchiarulli/telescope-tabs",
+    branch = "chris"
+  },
   "monaqa/dial.nvim",
   {
     "0x100101/lab.nvim",
