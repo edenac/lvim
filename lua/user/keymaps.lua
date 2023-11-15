@@ -19,7 +19,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   "n",
   "<s-tab>",
-  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>"
+  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='insert'})<cr>"
   ,
   opts
 )

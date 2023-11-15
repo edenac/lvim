@@ -20,7 +20,7 @@ ikmap("i", "<c-w>", "<esc>:BufferKill<cr>", opts)
 ikmap("i", "<m-bs>", "<esc>ldbi", opts)
 ikmap("i", "<m-0>", "<esc>ld0i", opts)
 ikmap("i", "<m-'>", "<esc>:normal gcc<cr>A", opts) -- asi puedo hacer el run-java directo desde el inoremap y de cualquier lenguaj
-
+-- esto comenta toda la linea completa no a partir de donde estoy es casi parecido a c-/
 -- alt key
 
 -- silent key

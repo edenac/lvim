@@ -114,6 +114,20 @@ nkmap("n", "<F11>", "<esc><cmd>w<cr>:TermExec cmd='clear; java %'<cr> ", opts) -
 nkmap("n", "L", ":HopWordCurrentLine<cr>", { silent = true })
 nkmap("n", "H", ":HopChar2<cr>", { silent = true })
 
+--telescope previewer
+
+nkmap("n", "td", "<cmd>TodoTelescope<cr>", opts) -- ver lista de todos
+nkmap("n", "tf", "<cmd>Telescope find_files<cr>", opts) -- buscar un archivo
+nkmap("n", "tp", "<cmd>Telescope projects<cr>", opts) -- buscar un proyecto
+nkmap("n", "tj", "<cmd>Telescope jumplist<cr>", opts) -- ver la lista de saltos, ya lo tengo con portal listo para elegir con tecla pero este es un buscador
+nkmap("n", "tk", "<cmd>Telescope keymaps<cr>", opts) -- ver lista de atajos
+nkmap("n", "tn", "<cmd>Telescope notify<cr>", opts) -- ver notificaciones, cuando no hay notificaciones el comando no esta disponible solo cuando hay
+nkmap("n", "tm", "<cmd>Telescope man_pages<cr>", opts) -- ver el man page del sistema por si se quiere bsucar algun comando
+nkmap("n", "th", "<cmd>Telescope search_history<cr>", opts) -- ver historial de lo que he buscado enlos archivos
+
+-- tab -> harpoon-marks
+-- shift + tab -> buffers
+
 -- Silent key --
 
 return M
